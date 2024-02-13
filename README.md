@@ -6,4 +6,4 @@
 
 ภานุพงศ์ ศรีเมือง
 
-![119215320_202143767934866_1367735202402701794_n](https://github.com/maxnalao/maxnalao.Github.io/assets/159878175/90f0ac48-9506-4e98-a07f-f974326fd6b8)
+![star1](https://github.com/maxnalao/maxnalao.Github.io/assets/159878175/35916f2b-45fc-40c6-8c70-3b012e5ace66)
