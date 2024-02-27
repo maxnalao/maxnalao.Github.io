@@ -1,11 +1,95 @@
 import streamlit as st
-st.sidebar.text('Sidebar')
-st.sidebar.button('go>')
-st.sidebar.button('went>')
-st.sidebar.button('gone>')
-st.title('ลุงพล เต้นเต่างอย')
-st.image('https://tse1.mm.bing.net/th?id=OIP.kPdcnTKWDiLMNQymEhjA_gHaLH&pid=Api&P=0&h=180')
-text = st.text_input('What s your neme?')
-if text:
-    st.image('data:image/jpeg;base64,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')
-    b = st.button('จะไปต่อหรอ...')
+
+st.image('https://www.teachernu.com/wp-content/uploads/2018/12/%E0%B8%9A%E0%B8%A7%E0%B8%81%E0%B8%A5%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B8%82%E0%B8%90%E0%B8%B2%E0%B8%99.png')
+st.sidebar.subheader('เลขฐานขอดนิยม')
+menu_option = st.sidebar.radio("คำนวณเลขฐาน", ['เลขฐาน2', 'เลขฐาน3', 'เลขฐาน8', 'เลขฐาน16'])
+def set_background(image_url):
+    image_url_str = f'url("{image_url}")'
+    css = f"""
+    <style>
+    .stApp {{
+        background-image: {image_url_str};
+        background-size: cover;
+    }}
+    </style>
+    """
+    st.markdown(css, unsafe_allow_html=True)
+
+
+##ใช้งานตรงนี้
+set_background("")
+def decimal_to_binary(decimal_num):
+    return bin(decimal_num).replace("0b", "")
+def binary_to_decimal(binary_num):
+    return int(binary_num, 2)
+
+def main():
+    if menu_option == 'เลขฐาน2':
+        st.title("แปลงเลขฐานสอง")
+
+        option = st.selectbox("เลือกตัวเลือก:", ["ทศนิยมเป็นเลขฐานสอง", "ไบนารีเป็นทศนิยม"])
+
+        if option == "ทศนิยมเป็นเลขฐานสอง":
+            decimal_num = st.number_input("ป้อนเลขทศนิยม:", value=0, step=1)
+            if st.button('แปลงเลข'):
+                binary_num = decimal_to_binary(decimal_num)
+                st.write(f"การแสดงทศนิยมของ {decimal_num} คือ: {binary_num}")
+        elif option == "ไบนารีเป็นทศนิยม":
+            binary_num = st.text_input("ป้อนเลขทศนิยม:")
+            if st.button('แปลงเลข'):
+                decimal_num = binary_to_decimal(binary_num)
+                st.write(f"การแสดงทศนิยมของ {binary_num} คือ: {decimal_num}")
+    if menu_option == 'เลขฐาน3':
+        st.title("แปลงเลขฐานสาม")
+
+        option = st.selectbox("เลือกตัวเลือก:", ["ทศนิยมเป็นฐานสาม", "ฐานสามเป็นทศนิยม"])
+
+        if option == "ทศนิยมเป็นฐานสาม":
+         decimal_num = st.number_input("ป้อนเลขทศนิยม:", value=0, step=1)
+         if st.button('แปลงเลข'):
+            ternary_num = decimal_to_ternary(decimal_num)
+            st.write(f"การแสดงทศนิยมของ {decimal_num} คือ: {ternary_num}")
+        elif option == "ฐานสามเป็นทศนิยม":
+         ternary_num = st.text_input("ป้อนเลขฐานสาม:")
+         if st.button('แปลงเลข'):
+            decimal_num = ternary_to_decimal(ternary_num)
+            st.write(f"การแสดงทศนิยมของ {ternary_num} คือ: {decimal_num}")
+
+    if menu_option == 'เลขฐาน8':
+         st.title("แปลงเลขฐานแปด")
+
+         option = st.selectbox("เลือกตัวเลือก:", ["ทศนิยมเป็นฐานแปด", "ฐานแปดเป็นทศนิยม"])
+
+         if option == "ทศนิยมเป็นฐานแปด":
+           decimal_num = st.number_input("ป้อนเลขทศนิยม:", value=0, step=1)
+           if st.button('แปลงเลข'):
+                octal_num = decimal_to_octal(decimal_num)
+                st.write(f"การแสดงทศนิยมของ {decimal_num} คือ: {octal_num}")
+         elif option == "ฐานแปดเป็นทศนิยม":
+            octal_num = st.text_input("ป้อนเลขฐานแปด:")
+            if st.button('แปลงเลข'):
+                decimal_num = octal_to_decimal(octal_num)
+                st.write(f"การแสดงทศนิยมของ {octal_num} คือ: {decimal_num}")
+
+    if menu_option == 'เลขฐาน16':
+        st.title("แปลงเลขฐานสิบหก")
+
+        option = st.selectbox("เลือกตัวเลือก:", ["ทศนิยมเป็นฐานสิบหก", "ฐานสิบหกเป็นทศนิยม"])
+
+        if option == "ทศนิยมเป็นฐานสิบหก":
+         decimal_num = st.number_input("ป้อนเลขทศนิยม:", value=0, step=1)
+         if st.button('แปลงเลข'):
+            hexadecimal_num = decimal_to_hexadecimal(decimal_num)
+            st.write(f"การแสดงทศนิยมของ {decimal_num} คือ: {hexadecimal_num}")
+        elif option == "ฐานสิบหกเป็นทศนิยม":
+         hexadecimal_num = st.text_input("ป้อนเลขฐานสิบหก:")
+         if st.button('แปลงเลข'):
+            decimal_num = hexadecimal_to_decimal(hexadecimal_num)
+            st.write(f"การแสดงทศนิยมของ {hexadecimal_num} คือ: {decimal_num}")
+     
+
+
+
+
+if __name__ == "__main__":
+    main()
